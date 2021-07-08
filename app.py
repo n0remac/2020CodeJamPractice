@@ -4,6 +4,7 @@ from rich.live import Live
 from panels.cameron import cameron_panel
 from panels.antsthebul import ants_panel
 from panels.frontogenesis import frontogenesis_panel
+from panels.isaac import isaac_panel
 
 
 def update_layout(layout):
@@ -18,7 +19,10 @@ def setup(layout):
     layout["top"].split_row(
         Layout(cameron_panel()),
         Layout(ants_panel()),
-        Layout(frontogenesis_panel()))
+        Layout(frontogenesis_panel()),
+        Layout(isaac_panel()),
+    )
+
 
 main_layout = Layout()
 
