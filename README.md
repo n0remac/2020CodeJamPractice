@@ -17,3 +17,5 @@ Install requirements:<br />
 Run app:<br />
 `python app.py`<br />
 
+## Creating new panel
+When creating a new panel add a file to the panels directory then import it in app.py. Add it to the layout in the setup function. The update function can be used to update_layout function will eventually be used to make the app animate or be interactive.
