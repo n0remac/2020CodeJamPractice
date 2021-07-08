@@ -2,6 +2,7 @@ from rich.layout import Layout
 from rich.live import Live
 
 from panels.cameron import cameron_panel
+from panels.antsthebul import ants_panel
 
 
 def update_layout(layout):
@@ -13,7 +14,9 @@ def setup(layout):
         Layout(name="top"),
         Layout(name="bottom"),
     )
-    layout["top"].update(cameron_panel())
+    layout["top"].split_row(
+        Layout(cameron_panel()),
+        Layout(ants_panel()))
 
 main_layout = Layout()
 
