@@ -1,12 +1,11 @@
 from rich.layout import Layout
 from rich.live import Live
-from rich.text import Text
-from rich.panel import Panel
 
 from panels.cameron import cameron_panel
 from panels.antsthebul import ants_panel
 
-def run_app(layout):
+
+def update_layout(layout):
     pass
 
 
@@ -22,6 +21,7 @@ def setup(layout):
 main_layout = Layout()
 
 if __name__ == "__main__":
-    with Live(layout, refresh_per_second=10, screen=True):
+    setup(main_layout)
+    with Live(main_layout, refresh_per_second=10, screen=True):
         while True:
-            run_app(layout)
+            update_layout(main_layout)
